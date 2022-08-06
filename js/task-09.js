@@ -9,8 +9,7 @@ const textValueRef = document.querySelector(".color");
 buttonRef.addEventListener("click", onChangeColorBody);
 
 function onChangeColorBody() {
-  const colorOfBody = (document.body.style.backgroundColor =
-    getRandomHexColor());
-
-  textValueRef.textContent = colorOfBody;
+  const newHexColor = getRandomHexColor();
+  document.body.style.backgroundColor = newHexColor;
+  textValueRef.textContent = newHexColor;
 }
