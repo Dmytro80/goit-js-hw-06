@@ -9,10 +9,10 @@ const destroyButtonRef = document.querySelector("button[data-destroy]");
 const boxesContainerRef = document.querySelector("#boxes");
 
 createButtonRef.addEventListener("click", createBoxes);
-destroyButtonRef.addEventListener("click", cleanBoxesContainer);
+destroyButtonRef.addEventListener("click", destroyBoxes);
 
 function createBoxes() {
-  const amount = Number(inputRef.value);
+  const amount = inputRef.value;
 
   const boxes = [];
 
@@ -27,6 +27,6 @@ function createBoxes() {
   return boxesContainerRef.append(...boxes);
 }
 
-function cleanBoxesContainer() {
+function destroyBoxes() {
   boxesContainerRef.innerHTML = "";
 }
